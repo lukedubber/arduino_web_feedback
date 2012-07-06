@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<title>Example 1</title>
+	
+	<script src = "js/jqueryui/js/jquery.js"></script>
+	<script src = "js/smoothie/smoothie.js"></script>
+	<script src = "js/jqueryui/js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script src ="js/DataTables-1.9.1/media/js/jquery.dataTables.js"></script>
+	<link rel="stylesheet" href="js/jqueryui/css/dot-luv/jquery-ui-1.8.21.custom.css" />
+	<link rel="stylesheet" href="js/DataTables-1.9.1/media/css/jquery.dataTables_themeroller.css" />
+	<style type=text/css>
+		
+/**		li.ui-state-default {
+		font-size : 10px;
+	}
+	div.ui-tabs-panel {
+		font-size : 15px;
+		font-family : georgia;
+		font-style : italic;
+	}
+**/
+	body{
+		background-color: black;
+	}
+	</style>
+</head>
+<body>
+	<div style="width: 700px">
+		<div class="ui-widget-header ui-corner-top  ui-corner-bottom">
+			<h1>Live data -- <span id="freq" /></h1><button id="refresh" />
+		</div>
+		<div class="ui-widget-content "> 
+			<h1>Analog1 - Potentiometer</h1>
+			<div id=potentiometerSlider></div>
+			<span id="head1"></span>
+			<canvas id="potentiometerChart" width=695px height="100"></canvas>					
+			<br />
+			<h1>Analog0 - Photoresistor</h1>
+			<div id=photoresistorSlider></div>	
+			<br />
+			<canvas id="photoresistorChart" width=695px height="100"></canvas>			
+			<br />
+			<h1>Digital6 - Ping Sensor (ultrasonic rang finder)</h1>
+			<div id=pingSlider></div>	
+			<br />
+			<canvas id="pingChart" width=695px height="100"></canvas>				
+			<h1>Digital5 | Digita13 | Digital2</h1>
+			<div id="buttonGroup">
+				<input type="checkbox" id="yellowBtn" /><label for="yellowBtn">Yellow</label>
+				<input type="checkbox" id="greenBtn" /><label for="greenBtn">Green</label>
+				<input type="checkbox" id="redBtn" /><label for="redBtn">Red</label>				
+			</div>
+			<br />
+	
+			<div id=errorlog></div>
+	
+		</div>
+		
+		<div class="ui-widget-header ui-corner-top  ui-corner-bottom"> 
+			<button type="submit" id="btnPause" name="Pause">Pause</button>
+		</div>
+	 
+	</div>
+			<img id="head" src="head.jpg">
+			<br />	
+	<div>
+
+		<table width="100%" id="dataTable">
+		<thead>
+			<th>analog0</th>
+			<th>analog1</th>
+			<th>analog2</th>
+			<th>analog3</th>
+			<th>analog4</th>
+			<th>analog5</th>
+			<th>yellow</th>
+			<th>green</th>
+			<th>red</th>
+			<th>digital0</th>
+			<th>digital1</th>
+			<th>digital2</th>
+			<th>digital3</th>
+			<th>digital4</th>
+			<th>digital5</th>
+			<th>digital6</th>
+			<th>digital7</th>
+			<th>digital8</th>
+			<th>digital9</th>
+			<th>digital10</th>
+			<th>digital11</th>
+			<th>digital12</th>
+			<th>digital13</th>
+		</thead>
+		<tbody>
+		</tbody>
+		<tfoot>
+                        <th>analog0</th>
+                        <th>analog1</th>
+                        <th>analog2</th>
+                        <th>analog3</th>
+                        <th>analog4</th>
+                        <th>analog5</th>
+                        <th>yellow</th>
+                        <th>green</th>
+                        <th>red</th>
+                        <th>digital0</th>
+                        <th>digital1</th>
+                        <th>digital2</th>
+                        <th>digital3</th>
+                        <th>digital4</th>
+                        <th>digital5</th>
+                        <th>digital6</th>
+                        <th>digital7</th>
+                        <th>digital8</th>
+                        <th>digital9</th>
+                        <th>digital10</th>
+                        <th>digital11</th>
+                        <th>digital12</th>
+                        <th>digital13</th>
+
+		</tfoot>
+		</table>
+	</div>
+	<script src="js/my_scripts.js"></script>
+	
+</body>
+</html>
